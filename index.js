@@ -49,7 +49,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://jordans-pet-agency.herokuapp.com/",
+      "https://jordans-pet-agency.herokuapp.com",
     ],
     credentials: true,
   })
