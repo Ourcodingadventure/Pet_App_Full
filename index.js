@@ -43,7 +43,7 @@ const petRoutes = require("./routes/petRoutes");
 const { MessageModel } = require("./models");
 
 app.use("/", express.static(path.resolve(path.join(__dirname, "./uploads"))));
-
+app.use("/", express.static(path.resolve(path.join(__dirname, "/build"))));
 //middlewares
 app.use(
   cors({
