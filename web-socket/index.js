@@ -1,14 +1,16 @@
 const { MessageModel } = require("../models");
 module.exports = (io) => {
+  console.log("lets see this");
   io.on("connect", (socket) => {
     console.log("user connected");
-    socket.on("sendMessage", async ({ name, message }) => {
-      const newMessage = await new MessageModel({
+    socket.on("sendMessage", ({ name, message }) => {
+      const newMessage = new MessageModel({
         name,
         message,
       });
-      io.emit("newMessage", { name, message });
+
       newMessage.save();
+      io.emit("newMessage", { name, message });
     });
   });
   io.on("return", ({ petName }) => {
@@ -16,6 +18,3 @@ module.exports = (io) => {
     socket.emit("available", { petName });
   });
 };
-
-// what type of chat application are you expecting from us
-// Admin can see all of the user, when we contact we can message.
