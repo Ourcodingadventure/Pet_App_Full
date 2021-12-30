@@ -78,9 +78,3 @@ app.post("/logout", logout);
 server.listen(PORT, () => {
   console.log(`Server is listening on ${PORT}`);
 });
-
-//depricated
-// app.get("/user/:id/full", getUserAndCart);
-
-//Todo notes from code review
-// imagekit-- for files cdn
