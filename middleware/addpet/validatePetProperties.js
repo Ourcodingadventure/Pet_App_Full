@@ -3,7 +3,7 @@ const validatePetProperties = (req, res, next) => {
     type,
     petName,
     adoptionStatus,
-    picture,
+    // picture,
     height,
     weight,
     color,
@@ -17,7 +17,7 @@ const validatePetProperties = (req, res, next) => {
     !type ||
     !petName ||
     !adoptionStatus ||
-    !picture ||
+    // !picture ||
     !height ||
     !weight ||
     !color ||

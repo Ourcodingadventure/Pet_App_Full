@@ -13,3 +13,7 @@ body {
 /* Header {
   background-color: #d68b1a;
 } */
+.scroll,
+::-webkit-scrollbar {
+  display: none;
+}
