@@ -14,22 +14,17 @@ const userRoutes = require("./routes/userRoutes");
 const { PORT } = require("./config");
 const getPetById = require("./controller/getPetById");
 const getUsers = require("./controller/getUsers");
-const multer = require("multer");
 const http = require("http");
 const path = require("path");
 const socketApp = require("./web-socket");
-
-//make into function and export/import
-// app.use(photoStorage());
-
 const app = express();
 const server = http.createServer(app);
+
 const io = socketIo(server, {
   cors: ["http://localhost:3000", "https://jordans-pet-agency.herokuapp.com"],
 });
 module.exports = { io };
 const petRoutes = require("./routes/petRoutes");
-const { MessageModel } = require("./models");
 const getMessages = require("./controller/getMessages");
 const { upload } = require("./middleware/photoStorage");
 

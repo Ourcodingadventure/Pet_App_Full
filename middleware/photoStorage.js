@@ -1,3 +1,5 @@
+const multer = require("multer");
+
 const storage = multer.diskStorage({
   // https://www.npmjs.com/package/multer#diskstorage
   destination: "./uploads/",
