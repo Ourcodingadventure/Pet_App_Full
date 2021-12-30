@@ -1,3 +1,4 @@
+const { MessageModel } = require("../models");
 const getMessages = (req, res) => {
   MessageModel.find({}, (err, messages) => {
     if (!err && messages) {
